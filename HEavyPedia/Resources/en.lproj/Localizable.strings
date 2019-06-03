@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  HEavyPedia
+
+  Created by david M on 29/05/2019.
+  Copyright © 2019 david M. All rights reserved.
+*/
+"title_alert_fest" = "Delete festival?";
+"message_alert_fest" = "Continue with this action you delete this festival";
+"accept" = "Accept";
+"cancel" = "Cancel";

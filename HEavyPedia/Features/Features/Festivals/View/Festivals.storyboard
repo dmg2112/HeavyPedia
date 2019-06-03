@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o4d-pe-Vp0">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Festivals-->
+        <scene sceneID="nem-RT-7ve">
+            <objects>
+                <viewController id="qvX-kC-Kux" customClass="FestivalsViewController" customModule="HEavyPedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MeL-A4-xTF"/>
+                        <viewControllerLayoutGuide type="bottom" id="vIz-md-4Aw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9T9-g1-y1T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QMQ-Pb-BTF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FestivalViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FestivalViewCell" rowHeight="199" id="gLs-Yt-ygl" customClass="FestivalViewCell" customModule="HEavyPedia" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="199"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gLs-Yt-ygl" id="Oc5-Cs-YaF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="198.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gr6-vz-qL8">
+                                                    <rect key="frame" x="12" y="11" width="171" height="177"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="177" id="09Y-he-3Kx"/>
+                                                        <constraint firstAttribute="width" constant="171" id="orx-Cs-m6E"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FestivalName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeB-1U-pVw">
+                                                    <rect key="frame" x="191" y="24" width="223" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="223" id="m0r-IA-pxv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FestivalLocation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuA-Id-3Rr">
+                                                    <rect key="frame" x="191" y="102" width="223" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="YVV-yA-6C8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="MuA-Id-3Rr" firstAttribute="leading" secondItem="JeB-1U-pVw" secondAttribute="leading" id="BSg-9F-oIW"/>
+                                                <constraint firstItem="gr6-vz-qL8" firstAttribute="leading" secondItem="Oc5-Cs-YaF" secondAttribute="leading" constant="12" id="CeC-Io-zn4"/>
+                                                <constraint firstItem="MuA-Id-3Rr" firstAttribute="top" secondItem="JeB-1U-pVw" secondAttribute="bottom" constant="40" id="Gss-jv-ekD"/>
+                                                <constraint firstItem="JeB-1U-pVw" firstAttribute="top" secondItem="Oc5-Cs-YaF" secondAttribute="top" constant="24" id="TZ5-rD-UaA"/>
+                                                <constraint firstAttribute="trailing" secondItem="JeB-1U-pVw" secondAttribute="trailing" id="WZ6-2z-8A4"/>
+                                                <constraint firstItem="JeB-1U-pVw" firstAttribute="leading" secondItem="gr6-vz-qL8" secondAttribute="trailing" constant="8" id="hOv-Eo-G9T"/>
+                                                <constraint firstAttribute="bottom" secondItem="gr6-vz-qL8" secondAttribute="bottom" constant="10.5" id="hlq-dm-cLB"/>
+                                                <constraint firstItem="gr6-vz-qL8" firstAttribute="top" secondItem="Oc5-Cs-YaF" secondAttribute="top" constant="11" id="oQ4-KO-RbI"/>
+                                                <constraint firstItem="MuA-Id-3Rr" firstAttribute="trailing" secondItem="JeB-1U-pVw" secondAttribute="trailing" id="x63-vP-Hzm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MuA-Id-3Rr" secondAttribute="bottom" constant="52" id="zKt-rn-2y3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="mLocation" destination="MuA-Id-3Rr" id="E26-yY-hra"/>
+                                            <outlet property="mName" destination="JeB-1U-pVw" id="gZv-IX-rFn"/>
+                                            <outlet property="mPhoto" destination="gr6-vz-qL8" id="R4h-gE-7oH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QMQ-Pb-BTF" secondAttribute="trailing" id="1rJ-RR-N6c"/>
+                            <constraint firstItem="vIz-md-4Aw" firstAttribute="top" secondItem="QMQ-Pb-BTF" secondAttribute="bottom" id="X1M-PT-mr8"/>
+                            <constraint firstItem="QMQ-Pb-BTF" firstAttribute="leading" secondItem="9T9-g1-y1T" secondAttribute="leading" id="Y0R-fV-Vva"/>
+                            <constraint firstItem="QMQ-Pb-BTF" firstAttribute="top" secondItem="MeL-A4-xTF" secondAttribute="bottom" id="oOG-NB-sX5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Festivals" image="Festivals" id="mha-8H-eyz">
+                        <color key="badgeColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="hVP-lL-97Y"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mTable" destination="QMQ-Pb-BTF" id="4sT-In-pfk"/>
+                        <segue destination="Zmq-Cf-4yh" kind="show" identifier="TO_DETAIL" id="f50-da-LZG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLq-sQ-Ebd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.072463768116" y="52.901785714285715"/>
+        </scene>
+        <!--Festival Detail View Controller-->
+        <scene sceneID="qVM-aR-YLP">
+            <objects>
+                <viewController id="Zmq-Cf-4yh" customClass="FestivalDetailViewController" customModule="HEavyPedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jMR-uB-y1j"/>
+                        <viewControllerLayoutGuide type="bottom" id="oav-cw-1uC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hrL-Ya-gS3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="947-eO-KPm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="304"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="304" id="VEB-iK-fqZ"/>
+                                    <constraint firstAttribute="width" constant="414" id="mRR-Lp-VBD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Festival Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie7-af-9Hm">
+                                <rect key="frame" x="0.0" y="419" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ktl-va-OX4"/>
+                                    <constraint firstAttribute="width" constant="414" id="sEl-Tj-gt1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Festival Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w6-cG-M8Y">
+                                <rect key="frame" x="0.0" y="467" width="414" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Festival Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZV-cI-kJE">
+                                <rect key="frame" x="0.0" y="515" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgC-Iz-KQb">
+                                <rect key="frame" x="58" y="775" width="286" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="onDeletePressedWithSender:" destination="Zmq-Cf-4yh" eventType="primaryActionTriggered" id="PfM-I8-oHV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4ZV-cI-kJE" secondAttribute="trailing" id="6fc-ju-FrY"/>
+                            <constraint firstItem="ie7-af-9Hm" firstAttribute="leading" secondItem="hrL-Ya-gS3" secondAttribute="leading" id="75e-dd-gb9"/>
+                            <constraint firstAttribute="trailing" secondItem="ie7-af-9Hm" secondAttribute="trailing" id="B99-6L-jVs"/>
+                            <constraint firstItem="947-eO-KPm" firstAttribute="top" secondItem="jMR-uB-y1j" secondAttribute="bottom" id="G0A-oi-f3U"/>
+                            <constraint firstAttribute="trailing" secondItem="947-eO-KPm" secondAttribute="trailing" id="GuO-9S-wdz"/>
+                            <constraint firstItem="3w6-cG-M8Y" firstAttribute="leading" secondItem="hrL-Ya-gS3" secondAttribute="leading" id="I8q-Vz-SFQ"/>
+                            <constraint firstItem="947-eO-KPm" firstAttribute="leading" secondItem="hrL-Ya-gS3" secondAttribute="leading" id="Ttx-CR-ePU"/>
+                            <constraint firstItem="ie7-af-9Hm" firstAttribute="top" secondItem="947-eO-KPm" secondAttribute="bottom" constant="27" id="Y9B-tD-he7"/>
+                            <constraint firstItem="4ZV-cI-kJE" firstAttribute="leading" secondItem="hrL-Ya-gS3" secondAttribute="leading" id="fyh-bx-pKy"/>
+                            <constraint firstItem="3w6-cG-M8Y" firstAttribute="top" secondItem="ie7-af-9Hm" secondAttribute="bottom" constant="8" id="gUZ-ot-hpb"/>
+                            <constraint firstAttribute="trailing" secondItem="3w6-cG-M8Y" secondAttribute="trailing" id="wXd-CE-ho7"/>
+                            <constraint firstItem="4ZV-cI-kJE" firstAttribute="top" secondItem="3w6-cG-M8Y" secondAttribute="bottom" constant="24" id="wcI-CA-dyu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mDescription" destination="4ZV-cI-kJE" id="mfI-sF-afG"/>
+                        <outlet property="mLocation" destination="3w6-cG-M8Y" id="3pc-Kn-f7g"/>
+                        <outlet property="mName" destination="ie7-af-9Hm" id="vaS-es-qhz"/>
+                        <outlet property="mPhoto" destination="947-eO-KPm" id="PYd-nY-Yby"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ARd-WV-tRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973.913043478261" y="52.901785714285715"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nfH-yO-tTR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o4d-pe-Vp0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mT9-Lo-anK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qvX-kC-Kux" kind="relationship" relationship="rootViewController" id="N2t-vJ-Wlj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F1O-j0-1ql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="52.901785714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Festivals" width="32" height="32"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>
