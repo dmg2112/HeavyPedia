@@ -17,13 +17,14 @@ class FestivalViewCell: UITableViewCell{
     
     
     
-    static var mEstimatedHeigh: CGFloat = 200
+    static var mHeigh: CGFloat = 200
     
     static var mId: String = String(describing: FestivalViewCell.self)
     
     func configureScreen(fest: Festival?){
         configure(name:fest?.name)
         configure(image: fest?.photo)
+        configure(location: fest?.location)
         
     }
     private func configure(name: String?){
@@ -43,13 +44,22 @@ class FestivalViewCell: UITableViewCell{
     private func configure(image: String?) {
         guard let photo = image else {
             mPhoto?.image = UIImage(named: "placeholder")
-            mPhoto?.layer.cornerRadius = (self.mPhoto?.frame.size.width ?? 0) / 2
             return
         }
         
         mPhoto?.image = UIImage(named: photo)
-        mPhoto?.layer.cornerRadius = (self.mPhoto?.frame.size.width ?? 0) / 2
     }
+    
+    private func configure(location: String?) {
+        guard let loc = location else {
+            
+            return
+        }
+        print("festival in \(loc)")
+       mLocation.text = loc
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         configure(view: mView)

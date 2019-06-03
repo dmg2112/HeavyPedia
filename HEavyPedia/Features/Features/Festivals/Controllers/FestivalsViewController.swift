@@ -33,7 +33,7 @@ extension FestivalsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return FestivalViewCell.mEstimatedHeigh
+        return FestivalViewCell.mHeigh
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,14 +59,12 @@ extension FestivalsViewController: UITableViewDataSource, UITableViewDelegate {
 }
 extension FestivalsViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get parameter as IndexPath
         guard let selectedPosition = sender as? IndexPath else {
             return
         }
         
-        // If destination controller is SubjectDetail
+        
         if let destinationController = segue.destination as? FestivalDetailViewController {
-            // Get selected item data and send to SubjectDetail controller
             destinationController.delegate = self
             destinationController.data = mFestivals?[selectedPosition.row]
             
