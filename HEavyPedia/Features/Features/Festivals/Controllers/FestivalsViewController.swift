@@ -76,11 +76,11 @@ extension FestivalsViewController{
 
 extension FestivalsViewController: FestivalDetailDelegate{
     func delete(festivalDelete: Festival?) {
-        guard let producer = festivalDelete else {
+        guard let fest = festivalDelete else {
             return
         }
         
-        mFestivals?.removeAll(where: { $0.name == producer.name })
+        mFestivals?.removeAll(where: { $0.name == fest.name })
         mTable.reloadData()
     }
     

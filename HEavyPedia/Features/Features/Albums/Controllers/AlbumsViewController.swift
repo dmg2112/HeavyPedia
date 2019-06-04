@@ -88,3 +88,34 @@ extension AlbumsViewController: UICollectionViewDelegate, UICollectionViewDataSo
                      sender: indexPath)
     }
 }
+
+extension AlbumsViewController{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedPosition = sender as? IndexPath else {
+            return
+        }
+        
+        
+        if let destinationController = segue.destination as? AlbumDetailViewController {
+            destinationController.delegate = self
+            destinationController.data = mAlbums[selectedPosition.row]
+            
+        }
+    }
+    
+}
+
+
+extension AlbumsViewController: AlbumDetailDelegate{
+    func delete(albumDelete : Album?) {
+        guard let album = albumDelete else {
+            return
+        }
+        
+        mAlbums.removeAll(where: { $0?.name == album.name })
+        mAlbumsView.reloadData()
+    }
+}
+
+
+

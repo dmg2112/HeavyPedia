@@ -10,15 +10,15 @@ import Foundation
 class Album{
     var photo: String?
     var name: String?
-    var producer: String?
+    var trackList: [String]?
     var group: Group?
     var year: Date?
     // initialize the object
-    convenience init(photo: String? = "placeholder",name: String? = nil, producer: String? = nil, group: Group? = nil, year: Date? = nil ) {
+    convenience init(photo: String? = "placeholder",name: String? = nil, trackList: [String]? = nil, group: Group? = nil, year: Date? = nil ) {
         self.init()
         self.photo = photo
         self.name = name
-        self.producer = producer
+        self.trackList = trackList
         self.group = group
         self.year = year
         

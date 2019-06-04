@@ -32,9 +32,9 @@ var musicians: [Musician] = [hetfield,ulrich,trujillo,hammet]
 
 
 
-var puppets = Album(photo: "masterofpuppets", name: "Master of Puppets",producer: "Flemming Rassmusen",group: metallica,year:Calendar.current.date(from: DateComponents(year:1986,month:7,day:1)) )
+var puppets = Album(photo: "masterofpuppets", name: "Master of Puppets",trackList: ["Battery","Master of puppets","The thing that should not be","Welcome home (sanitarium)","Disposable heroes","Leper messiah","Orion","Damage Inc"],group: metallica,year:Calendar.current.date(from: DateComponents(year:1986,month:7,day:1)) )
 
-var killemall = Album(photo: "killemall", name: "Kill'Em All",producer:"Paul Curcio",group: metallica,year:Calendar.current.date(from: DateComponents(year:1983,month:7,day:25)) )
+var killemall = Album(photo: "killemall", name: "Kill'Em All",trackList:["Hit the lights","The four horsemen","Motorbreath","(Anesthesia) Pulling teeth","Wiplash","Phantom lord","No remorse","Seek and destroy","Metal militia"],group: metallica,year:Calendar.current.date(from: DateComponents(year:1983,month:7,day:25)) )
 var albums: [Album] = [killemall,puppets]
 
 var metallica = Group(photo:"metallica",name: "Metallica", debut:Calendar.current.date(from: DateComponents(year:1982,month:3,day:14)) , members: [hetfield,ulrich,hammet,trujillo], retirement: nil, genre: .thrash

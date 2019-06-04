@@ -56,6 +56,7 @@ extension GroupsViewController: UITableViewDataSource, UITableViewDelegate {
     
     
 }
+
 extension GroupsViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let selectedPosition = sender as? IndexPath else {
@@ -75,11 +76,11 @@ extension GroupsViewController{
 
 extension GroupsViewController: GroupDetailDelegate{
     func delete(GroupDelete: Group?) {
-        guard let producer = GroupDelete else {
+        guard let group = GroupDelete else {
             return
         }
         
-        mGroups?.removeAll(where: { $0.name == producer.name })
+        mGroups?.removeAll(where: { $0.name == group.name })
         mGroupsView.reloadData()
 }
 }
