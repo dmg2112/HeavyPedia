@@ -6,6 +6,12 @@
   Copyright © 2019 david M. All rights reserved.
 */
 "title_alert_fest" = "¿Borrar Festival?";
+
 "message_alert_fest" = "Continuar con esta accion eliminará a este festival";
+
 "accept" = "Aceptar";
+
 "cancel" = "Cancelar";
+
+"title_alert_group" = "¿Borrar Grupo?";
+"message_alert_group" = "Continuar con esta accion eliminará a este Grupo";

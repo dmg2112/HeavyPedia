@@ -21,8 +21,8 @@ class GroupDetailViewController: UIViewController{
     
     
     @IBAction func onDelete(sender: UIButton) {
-        showAlert(title: NSLocalizedString("title_alert_fest", comment: ""),
-                  message: NSLocalizedString("message_alert_fest", comment: ""),
+        showAlert(title: NSLocalizedString("title_alert_group", comment: ""),
+                  message: NSLocalizedString("message_alert_group", comment: ""),
                   actionAccept: { _ in
                     self.navigateBack()
         })

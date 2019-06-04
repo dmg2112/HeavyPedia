@@ -23,6 +23,7 @@
                     <connections>
                         <segue destination="UmH-Dc-4c9" kind="relationship" relationship="viewControllers" id="bP7-E5-FOs"/>
                         <segue destination="RJr-W0-a3b" kind="relationship" relationship="viewControllers" id="Mgm-5g-75Y"/>
+                        <segue destination="npE-F3-rbs" kind="relationship" relationship="viewControllers" id="ZXw-va-xj0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omb-WA-hs3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -48,6 +49,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRU-Ae-zQx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="377" y="-446"/>
+        </scene>
+        <!--Albums-->
+        <scene sceneID="SGW-YH-W6R">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Albums" id="npE-F3-rbs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="I99-XY-3b8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxg-Em-1KN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="377" y="-346"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

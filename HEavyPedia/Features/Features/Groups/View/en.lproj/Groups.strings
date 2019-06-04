@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Genre"; ObjectID = "25l-xd-6yS"; */
+"25l-xd-6yS.text" = "Genre";
+
+/* Class = "UILabel"; text = "MEMBERS"; ObjectID = "2bO-Es-ego"; */
+"2bO-Es-ego.text" = "MEMBERS";
+
+/* Class = "UILabel"; text = "DEBUT"; ObjectID = "FZL-ND-oEn"; */
+"FZL-ND-oEn.text" = "DEBUT";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "OTf-Fd-brz"; */
+"OTf-Fd-brz.text" = "Name";
+
+/* Class = "UILabel"; text = "members Label"; ObjectID = "UyS-zx-9uj"; */
+"UyS-zx-9uj.text" = "members Label";
+
+/* Class = "UITabBarItem"; title = "Groups"; ObjectID = "WrX-Hb-A7k"; */
+"WrX-Hb-A7k.title" = "Groups";
+
+/* Class = "UILabel"; text = "Group Name"; ObjectID = "kyy-y2-yve"; */
+"kyy-y2-yve.text" = "Group Name";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "zqg-X3-ZAs"; */
+"zqg-X3-ZAs.normalTitle" = "Delete";

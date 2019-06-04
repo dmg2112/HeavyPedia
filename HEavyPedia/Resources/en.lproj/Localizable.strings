@@ -9,3 +9,5 @@
 "message_alert_fest" = "Continue with this action you delete this festival";
 "accept" = "Accept";
 "cancel" = "Cancel";
+"title_alert_group" = "Delete group?";
+"message_alert_group" = "Continue with this action you delete this group";

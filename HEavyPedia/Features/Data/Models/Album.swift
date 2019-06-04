@@ -13,9 +13,10 @@ class Album{
     var producer: String?
     var group: Group?
     var year: Date?
-    
+    // initialize the object
     convenience init(photo: String? = "placeholder",name: String? = nil, producer: String? = nil, group: Group? = nil, year: Date? = nil ) {
         self.init()
+        self.photo = photo
         self.name = name
         self.producer = producer
         self.group = group

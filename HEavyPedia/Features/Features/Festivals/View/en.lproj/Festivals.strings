@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Festival Location"; ObjectID = "3w6-cG-M8Y"; */
+"3w6-cG-M8Y.text" = "Festival Location";
+
+/* Class = "UILabel"; text = "Festival Description"; ObjectID = "4ZV-cI-kJE"; */
+"4ZV-cI-kJE.text" = "Festival Description";
+
+/* Class = "UILabel"; text = "FestivalName"; ObjectID = "JeB-1U-pVw"; */
+"JeB-1U-pVw.text" = "FestivalName";
+
+/* Class = "UILabel"; text = "FestivalLocation"; ObjectID = "MuA-Id-3Rr"; */
+"MuA-Id-3Rr.text" = "FestivalLocation";
+
+/* Class = "UILabel"; text = "Festival Name"; ObjectID = "ie7-af-9Hm"; */
+"ie7-af-9Hm.text" = "Festival Name";
+
+/* Class = "UITabBarItem"; title = "Festivals"; ObjectID = "mha-8H-eyz"; */
+"mha-8H-eyz.title" = "Festivals";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "qgC-Iz-KQb"; */
+"qgC-Iz-KQb.normalTitle" = "Delete";

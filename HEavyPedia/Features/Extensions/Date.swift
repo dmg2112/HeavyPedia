@@ -10,7 +10,7 @@ import Foundation
 extension Date{
     func formatter () -> String{
         let subjectDateFormatted = DateFormatter()
-        subjectDateFormatted.locale = Locale(identifier: "es_ES")
+        subjectDateFormatted.locale = Locale(identifier: Locale.current.languageCode ?? "ES_es")
         subjectDateFormatted.dateFormat="MMMM/dd/yyyy"
         return "\(subjectDateFormatted.string(from: self))"
         
