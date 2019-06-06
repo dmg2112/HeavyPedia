@@ -23,6 +23,7 @@ class MusicianViewCell: UITableViewCell{
         mPhoto.image = nil
     }
     
+    //call the configure functions
     func configure(data: Musician?){
         configure(image: data?.photo)
         configure(name: data?.name, surname: data?.surname)
@@ -30,6 +31,7 @@ class MusicianViewCell: UITableViewCell{
         
     }
     
+    // configure the image
     private func configure(image: String?){
         guard let img = image else{
             mPhoto.image = UIImage(named: "placeholder")
@@ -39,6 +41,7 @@ class MusicianViewCell: UITableViewCell{
         mPhoto.image = UIImage(named: img)
     }
     
+    //configure the full name ( name + surname)
     private func configure(name: String?, surname: String?){
         guard let nm = name, let sr = surname else{
             return
@@ -46,6 +49,7 @@ class MusicianViewCell: UITableViewCell{
         mName.text = "\(nm) \(sr)"
     }
     
+    //configure the life text ( birth-death)
     private func configure(birth: Date? , defunc: Date?){
         guard let brth = birth else{
             return

@@ -81,7 +81,7 @@ class MusicianDetailViewController: UIViewController{
         
     }
     
-    
+    //searches the members and past members of each group, for each group creates an array of strings and checks wether the full name of this musician is in it. If true, adds the group to the list
     private func configureTableView(member: Musician?){
         mBandsView?.dataSource = self
         mBandsView?.delegate = self
@@ -95,6 +95,14 @@ class MusicianDetailViewController: UIViewController{
             var names: [String] = []
             
             $0.members?.forEach{
+                guard let name = $0.name , let surname = $0.surname else{
+                    return
+                }
+                let member = "\(name) \(surname)"
+                names.append(member)
+                
+            }
+            $0.pastMembers?.forEach{
                 guard let name = $0.name , let surname = $0.surname else{
                     return
                 }

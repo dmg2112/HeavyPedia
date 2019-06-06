@@ -11,3 +11,7 @@
 "cancel" = "Cancel";
 "title_alert_group" = "Delete group?";
 "message_alert_group" = "Continue with this action you delete this group";
+"title_alert_album" = "Delete album?";
+"message_alert_album" = "Continue with this action you delete this album";
+"title_alert_musician" = "Delete musician?";
+"message_alert_musician" = "Continue with this action you delete this musician";

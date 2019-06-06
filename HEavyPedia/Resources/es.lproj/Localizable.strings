@@ -15,3 +15,7 @@
 
 "title_alert_group" = "¿Borrar Grupo?";
 "message_alert_group" = "Continuar con esta accion eliminará a este Grupo";
+"title_alert_album" = "¿Borrar Album?";
+"message_alert_Album" = "Continuar con esta accion eliminará a este Album";
+"title_alert_musician" = "¿Borrar Músico?";
+"message_alert_musician" = "Continuar con esta accion eliminará a este Músico";

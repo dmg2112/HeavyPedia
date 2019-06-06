@@ -9,7 +9,8 @@
 import UIKit
 class FestivalsViewController: UIViewController{
     @IBOutlet weak var mTable: UITableView!
-    var mFestivals: [Festival]? =  festivals
+    
+    var mFestivals: [Festival]? = fests
     
     
     

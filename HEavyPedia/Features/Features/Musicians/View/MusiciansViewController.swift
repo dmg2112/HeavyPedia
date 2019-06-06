@@ -13,10 +13,12 @@ class MusiciansViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mMusicians =  musicians
+        mMusicians =  artists
         configure()
         
+    
     }
+ 
     private func configure(){
         
         mMusiciansView?.delegate = self
@@ -27,15 +29,17 @@ class MusiciansViewController: UIViewController{
 }
 
 extension MusiciansViewController: UITableViewDataSource, UITableViewDelegate {
+  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return mMusicians?.count ?? 0
     }
     
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return MusicianViewCell.mHeight
     }
-    
+     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MusicianViewCell.mId,
                                                  for: indexPath) as! MusicianViewCell
@@ -47,6 +51,9 @@ extension MusiciansViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         performSegue(withIdentifier: segueToDetail,
@@ -59,6 +66,7 @@ extension MusiciansViewController: UITableViewDataSource, UITableViewDelegate {
 
 
 extension MusiciansViewController{
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let selectedPosition = sender as? IndexPath else {
             return
@@ -75,6 +83,7 @@ extension MusiciansViewController{
 }
 
 extension MusiciansViewController: MusicianDetailDelegate{
+    
     func delete(MusicianDelete: Musician?) {
         guard let musician = MusicianDelete else {
             return
