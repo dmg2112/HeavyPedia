@@ -8,21 +8,27 @@
 
 import UIKit
 class MusiciansViewController: UIViewController{
-    var mMusicians: [Musician]? = musicians
+    var mMusicians: [Musician]?
     @IBOutlet weak var mMusiciansView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mMusicians =  musicians
         configure()
         
     }
     private func configure(){
+        
+        mMusiciansView?.delegate = self
+        mMusiciansView?.dataSource = self
+
         mMusiciansView.reloadData()
     }
 }
 
 extension MusiciansViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return mMusicians?.count ?? 0
     }
     
@@ -35,6 +41,7 @@ extension MusiciansViewController: UITableViewDataSource, UITableViewDelegate {
                                                  for: indexPath) as! MusicianViewCell
         
         if let musician = mMusicians?[indexPath.row] {
+            
             cell.configure(data: musician)
         }
         
@@ -68,12 +75,22 @@ extension MusiciansViewController{
 }
 
 extension MusiciansViewController: MusicianDetailDelegate{
-    func delete(GroupDelete: Group?) {
-        guard let group = GroupDelete else {
+    func delete(MusicianDelete: Musician?) {
+        guard let musician = MusicianDelete else {
             return
         }
         
-        mMusicians?.removeAll(where: { $0.name == group.name })
+        mMusicians?.removeAll(where: {
+            guard let arrayName = $0.name,let arraySurname = $0.surname else {
+                return false
+            }
+            guard let musicianName = musician.name,let musicianSurname = musician.surname else {
+                return false
+            }
+            return (arrayName+arraySurname) == (musicianName+musicianSurname)
+            
+            
+        })
         mMusiciansView.reloadData()
     }
 }

@@ -24,7 +24,7 @@ var goldy = Musician(photo: "goldy",name: "Craig", surname: "Goldy", birth: Cale
 
 
 
-var musicians: [Musician] = [hetfield,ulrich,trujillo,hammet]
+var musicians: [Musician] = [hetfield,ulrich,trujillo,hammet,ronnieJamesDio]
 
 
 

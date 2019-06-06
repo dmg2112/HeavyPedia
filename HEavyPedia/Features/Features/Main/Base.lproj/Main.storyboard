@@ -24,6 +24,7 @@
                         <segue destination="UmH-Dc-4c9" kind="relationship" relationship="viewControllers" id="bP7-E5-FOs"/>
                         <segue destination="RJr-W0-a3b" kind="relationship" relationship="viewControllers" id="Mgm-5g-75Y"/>
                         <segue destination="npE-F3-rbs" kind="relationship" relationship="viewControllers" id="ZXw-va-xj0"/>
+                        <segue destination="epM-a8-FPa" kind="relationship" relationship="viewControllers" id="S4s-4U-HBh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omb-WA-hs3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -59,6 +60,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxg-Em-1KN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="377" y="-346"/>
+        </scene>
+        <!--Musicians-->
+        <scene sceneID="3sj-9K-en5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Musicians" id="epM-a8-FPa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gam-4B-1cU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rDo-VJ-zJH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309" y="-262"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

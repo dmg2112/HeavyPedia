@@ -8,38 +8,89 @@
 
 import UIKit
 protocol MusicianDetailDelegate {
-    func delete(GroupDelete: Group?)
+    func delete(MusicianDelete: Musician?)
 }
 class MusicianDetailViewController: UIViewController{
-    @IBOutlet weak var mName: UILabel!
-    @IBOutlet weak var mLife: UILabel!
-    @IBOutlet weak var mPhoto: UIImageView!
-    @IBOutlet weak var mBandsView: UITableView!
+    
+    @IBOutlet weak var mName: UILabel?
+    @IBOutlet weak var mLife: UILabel?
+    @IBOutlet weak var mPhoto: UIImageView?
+    @IBOutlet weak var mBandsView: UITableView?
+    
+    @IBAction func onDelete(sender: UIButton) {
+        showAlert(title: NSLocalizedString("title_alert_musician", comment: ""),
+                  message: NSLocalizedString("message_alert_musician", comment: ""),
+                  actionAccept: { _ in
+                    self.navigateBack()
+        })
+    }
     
     var delegate: MusicianDetailDelegate?
-    var data: Musician? = nil
-    var mBands: [Group] = []
+    var data: Musician?
+    var mBands: [Group]? = []
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+    
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        prepare()
     }
     
-    func prepare(data: Musician?){
-        configure(member:data)
+    
+    private func prepare(){
+        
+        configureTableView(member:data)
+        configure(birth: data?.birth, defunc: data?.defunction)
+        configure(name: data?.name, surname: data?.surname
+        )
+        configure(image: data?.photo)
         
         
     }
     
-    private func configure(member: Musician?){
+    //changes the image to the photo of the artist or to a placeholder if nil
+    private func configure(image: String?){
+        guard let img = image else{
+            mPhoto?.image = UIImage(named: "placeholder")
+            return
+        }
+        
+        mPhoto?.image = UIImage(named: img)
+    }
+    
+    //changes the label text to name surname
+    private func configure(name: String?, surname : String?){
+        guard let nm = name,let sr = surname else{
+            return
+        }
+        
+        let artist = "\(nm) \(sr)"
+        mName?.text = artist
+    }
+    
+    //prepares the date and checks wether the defunction date is nil or set
+    private func configure(birth: Date? , defunc: Date?){
+        guard let brth = birth else{
+            return
+        }
+        if let defunct = defunc{
+            mLife?.text = "\(brth.formatter())-\(defunct.formatter())"
+        }else{
+            mLife?.text = "\(brth.formatter())"
+        }
+        
+        
+    }
+    
+    
+    private func configureTableView(member: Musician?){
+        mBandsView?.dataSource = self
+        mBandsView?.delegate = self
         guard let nm = member?.name,let sr = member?.surname else{
             return
         }
+        
         let artist = "\(nm) \(sr)"
-        mName.text = artist
+        print(artist)
         mBands = groups.filter{
             var names: [String] = []
             
@@ -56,15 +107,39 @@ class MusicianDetailViewController: UIViewController{
             }
             return names.contains(artist)
         }
-        mBands.forEach{
-            print($0.name)
-        }
-        mBandsView.reloadData()
-        
+        mBandsView?.reloadData()
         
     }
     
+    private func navigateBack(){
+        delegate?.delete(MusicianDelete: data)
+        navigationController?.popViewController(animated: true)
+    }
     
+    
+    
+}
+
+extension MusicianDetailViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mBands?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let height: CGFloat = 115.0
+        return height
+    }
+    //Configure the cells
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: GroupViewCell.mId,
+                                                 for: indexPath) as! GroupViewCell
+        
+        if let group = mBands?[indexPath.row] {
+            cell.configure(data: group)
+        }
+        
+        return cell
+    }
     
     
 }

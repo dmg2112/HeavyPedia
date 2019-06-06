@@ -73,7 +73,6 @@ class GroupDetailViewController: UIViewController{
                 return
             }
             text = text + "\(name) \(surname) \r\n "
-            print(text)
             
         }
         mMembers.text = text
@@ -102,4 +101,6 @@ class GroupDetailViewController: UIViewController{
         navigationController?.popViewController(animated: true)
     }
 }
+
+
 
