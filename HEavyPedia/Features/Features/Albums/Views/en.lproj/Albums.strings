@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Release:"; ObjectID = "2tc-0m-Uyk"; */
+"2tc-0m-Uyk.text" = "Release:";
+
+/* Class = "UILabel"; text = "AlbumName"; ObjectID = "ABA-T3-PvA"; */
+"ABA-T3-PvA.text" = "AlbumName";
+
+/* Class = "UITabBarItem"; title = "Albums"; ObjectID = "ABm-6u-Eb0"; */
+"ABm-6u-Eb0.title" = "Albums";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "Bz4-Sm-X3A"; */
+"Bz4-Sm-X3A.normalTitle" = "Delete";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "CzW-qs-C0e"; */
+"CzW-qs-C0e.text" = "Label";
+
+/* Class = "UILabel"; text = "Track list"; ObjectID = "WNM-vc-eM8"; */
+"WNM-vc-eM8.text" = "Track list";
+
+/* Class = "UILabel"; text = "Artist Name"; ObjectID = "bpz-XR-Dfb"; */
+"bpz-XR-Dfb.text" = "Artist Name";
+
+/* Class = "UILabel"; text = "Artist:"; ObjectID = "gXW-Sy-sIN"; */
+"gXW-Sy-sIN.text" = "Artist:";
+
+/* Class = "UILabel"; text = "Release Date"; ObjectID = "sXq-Ta-Zav"; */
+"sXq-Ta-Zav.text" = "Release Date";

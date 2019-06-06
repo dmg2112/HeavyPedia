@@ -20,11 +20,17 @@ var trujillo = Musician(photo: "robTrujillo",name: "Robert", surname: "Trujillo"
 
 var ronnieJamesDio = Musician(photo: "ronnieJames",name: "Ronnie ", surname: "James Dio", birth: Calendar.current.date(from: DateComponents(year:1942,month:7,day:10)), defunction:Calendar.current.date(from: DateComponents(year:2010,month:5,day:16)))
 
-var goldy = Musician(photo: "goldy",name: "Craig", surname: "Goldy", birth: Calendar.current.date(from: DateComponents(year:1963,month:8,day:3)) )
+var goldy = Musician(photo: "goldy",name: "Craig", surname: "Goldy", birth: Calendar.current.date(from: DateComponents(year:1961,month:11,day:6)) )
+
+var sarzo = Musician(photo: "sarzo",name: "Rudy", surname: "Sarzo", birth: Calendar.current.date(from: DateComponents(year:1950,month:11,day:18)) )
+
+var key = Musician(photo: "sarzo",name: "Rudy", surname: "Sarzo", birth: Calendar.current.date(from: DateComponents(year:1950,month:11,day:18)) )
 
 
 
-var musicians: [Musician] = [hetfield,ulrich,trujillo,hammet,ronnieJamesDio]
+
+
+var musicians: [Musician] = [hetfield,ulrich,trujillo,hammet,ronnieJamesDio,goldy,sarzo]
 
 
 
@@ -35,14 +41,26 @@ var musicians: [Musician] = [hetfield,ulrich,trujillo,hammet,ronnieJamesDio]
 var puppets = Album(photo: "masterofpuppets", name: "Master of Puppets",trackList: ["Battery","Master of puppets","The thing that should not be","Welcome home (sanitarium)","Disposable heroes","Leper messiah","Orion","Damage Inc"],group: metallica,year:Calendar.current.date(from: DateComponents(year:1986,month:7,day:1)) )
 
 var killemall = Album(photo: "killemall", name: "Kill'Em All",trackList:["Hit the lights","The four horsemen","Motorbreath","(Anesthesia) Pulling teeth","Wiplash","Phantom lord","No remorse","Seek and destroy","Metal militia"],group: metallica,year:Calendar.current.date(from: DateComponents(year:1983,month:7,day:25)) )
+
 var albums: [Album] = [killemall,puppets]
 
-var metallica = Group(photo:"metallica",name: "Metallica", debut:Calendar.current.date(from: DateComponents(year:1982,month:3,day:14)) , members: [hetfield,ulrich,hammet,trujillo], retirement: nil, genre: .thrash
+
+var metallica = Group(photo:"metallica",name: "Metallica", debut:Calendar.current.date(from: DateComponents(year:1982,month:3,day:14)) , members: [hetfield,ulrich,hammet,trujillo], genre: .thrash
 )
-let wacken = Festival(photo:"wacken",name: "Wacken Open Air" , location: "Wacken, GER" ,description: "The biggest festival of metal and rock in the world. 30 years have been there, rocking the world. A must if you are into metal")
-var festivals: [Festival]? = [wacken]
+
+var dioBand = Group(photo:"dioBand",name: "DIO", debut:Calendar.current.date(from: DateComponents(year:1982,month:3,day:14)) , members: [hetfield,ulrich,hammet,trujillo], genre: .thrash
+)
 
 var groups = [metallica]
+
+
+let wacken = Festival(photo:"wacken",name: "Wacken Open Air" , location: "Wacken, GER" ,description: "The biggest festival of metal and rock in the world. 30 years have been there, rocking the world. A must if you are into metal")
+
+
+var festivals: [Festival]? = [wacken]
+
+
+
 
 
 

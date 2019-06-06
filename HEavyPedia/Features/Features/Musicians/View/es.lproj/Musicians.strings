@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Associed acts"; ObjectID = "1Ai-sy-38A"; */
+"1Ai-sy-38A.text" = "Actos asociados";
+
+/* Class = "UILabel"; text = "Artist Name"; ObjectID = "Dfp-xw-JpF"; */
+"Dfp-xw-JpF.text" = "Artist Name";
+
+/* Class = "UILabel"; text = "Band genre"; ObjectID = "dgE-en-KrP"; */
+"dgE-en-KrP.text" = "Band genre";
+
+/* Class = "UILabel"; text = "Musician life"; ObjectID = "fM2-j4-Ia7"; */
+"fM2-j4-Ia7.text" = "Musician life";
+
+/* Class = "UILabel"; text = "Artist life"; ObjectID = "fTt-FB-Vwb"; */
+"fTt-FB-Vwb.text" = "Artist life";
+
+/* Class = "UITabBarItem"; title = "Musicians"; ObjectID = "hYX-2n-rZw"; */
+"hYX-2n-rZw.title" = "Músicos";
+
+/* Class = "UILabel"; text = "Musician name"; ObjectID = "ksd-M9-boi"; */
+"ksd-M9-boi.text" = "Musician name";
+
+/* Class = "UILabel"; text = "Band name"; ObjectID = "qpY-ug-EcE"; */
+"qpY-ug-EcE.text" = "Band name";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "sl4-vv-6CY"; */
+"sl4-vv-6CY.normalTitle" = "borrar";
