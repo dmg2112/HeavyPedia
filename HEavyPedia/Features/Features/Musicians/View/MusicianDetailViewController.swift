@@ -39,6 +39,7 @@ class MusicianDetailViewController: UIViewController{
             return
         }
         let artist = "\(nm) \(sr)"
+        mName.text = artist
         mBands = groups.filter{
             var names: [String] = []
             
@@ -55,7 +56,9 @@ class MusicianDetailViewController: UIViewController{
             }
             return names.contains(artist)
         }
-        
+        mBands.forEach{
+            print($0.name)
+        }
         mBandsView.reloadData()
         
         
@@ -65,3 +68,7 @@ class MusicianDetailViewController: UIViewController{
     
     
 }
+
+
+
+
