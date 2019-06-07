@@ -24,7 +24,7 @@ class AlbumsViewController: UIViewController{
         
     }
     private func  loadData(){
-        mAlbums = records
+        mAlbums = albums
     }
     
     private func configureCollectionView(){

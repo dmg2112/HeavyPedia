@@ -13,7 +13,7 @@ class MusiciansViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mMusicians =  artists
+        mMusicians =  musicians
         configure()
         
     
