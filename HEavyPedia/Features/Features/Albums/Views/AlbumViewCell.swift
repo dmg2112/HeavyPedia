@@ -13,9 +13,12 @@ class AlbumViewCell: UICollectionViewCell{
     
     @IBOutlet weak var mCover: UIImageView!
     
+    //prepate the cell for reuse
     override func prepareForReuse() {
         mCover.image = nil
     }
+    
+    //set the data and image to the data
     func configure(data: Album?){
         guard let photo = data?.photo else{
             mCover?.image = UIImage(named: "placeholder")

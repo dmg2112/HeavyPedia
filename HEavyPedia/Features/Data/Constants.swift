@@ -9,3 +9,4 @@
 import Foundation
 
 let segueToDetail = "TO_DETAIL"
+let dateString = "MM/dd/yyyy"

@@ -11,6 +11,7 @@ class MusiciansViewController: UIViewController{
     var mMusicians: [Musician]?
     @IBOutlet weak var mMusiciansView: UITableView!
     
+    //prepare the cell once it loads the view
     override func viewDidLoad() {
         super.viewDidLoad()
         mMusicians =  musicians
@@ -19,6 +20,7 @@ class MusiciansViewController: UIViewController{
     
     }
  
+    //configure the table delegate and datasource, reloading after
     private func configure(){
         
         mMusiciansView?.delegate = self
@@ -29,17 +31,18 @@ class MusiciansViewController: UIViewController{
 }
 
 extension MusiciansViewController: UITableViewDataSource, UITableViewDelegate {
-  
+    
+    //return the count of
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return mMusicians?.count ?? 0
     }
     
-
+    //return the cell for the height of the cell
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return MusicianViewCell.mHeight
     }
-     
+    //return the cell prepared
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MusicianViewCell.mId,
                                                  for: indexPath) as! MusicianViewCell
@@ -53,7 +56,7 @@ extension MusiciansViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     
-    
+    //perform the segue
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         performSegue(withIdentifier: segueToDetail,
@@ -66,7 +69,7 @@ extension MusiciansViewController: UITableViewDataSource, UITableViewDelegate {
 
 
 extension MusiciansViewController{
-    
+    //prepare the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let selectedPosition = sender as? IndexPath else {
             return
@@ -83,7 +86,7 @@ extension MusiciansViewController{
 }
 
 extension MusiciansViewController: MusicianDetailDelegate{
-    
+    //delete based on full name using where clause
     func delete(MusicianDelete: Musician?) {
         guard let musician = MusicianDelete else {
             return
